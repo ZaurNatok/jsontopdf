@@ -1,0 +1,29 @@
+.header__logo {
+    width: 150px;
+}
+
+.menu {
+    width: 80%;
+    margin: auto;
+}
+
+.category__container {  display: grid;
+    grid-template-columns: 1.9fr 1.1fr 0.1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "item__name item__price ."
+      "item__description item__price ."
+      ". . .";
+  }
+  
+  .item__name { grid-area: item__name; margin: 0; background: #eee;}
+  
+  .item__description { grid-area: item__description; margin: 0; background: #eee;}
+  
+  .item__price { grid-area: item__price; margin: 0; background: #eee;     align-items: center;
+    display: flex;     font-size: 22px;
+    font-weight: 600;     width: 30px;}
+  
+  

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="generatePDF()">Сохранить в PDF</button>
+    <hr />
+
+    <div class="toPdf">
+
+        <div class="toPdf__header">
+            
+            <img src="./logo.avif" alt="" class="header__logo">
+            <div class="menu" id="menu">
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+<script src="./content.js"></script>
+<script src="./script.js"></script>
+
+<script>
+    function generatePDF() {
+    const element = document.getElementById('menu');
+    html2pdf()
+        .from(element)
+        .save();
+}
+</script>
+
+</html>
